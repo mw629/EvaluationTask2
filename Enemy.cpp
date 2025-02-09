@@ -18,15 +18,22 @@ void Enemy::Init()
 
 void Enemy::Update()
 {
-	pos_.x += velocity_.x;
-	if (pos_.x < 0+size_.x || pos_.x > 1280-size_.x)
-	{
-		velocity_.x *= -1;
+	if (!isAlive_){
+
+	}
+	if (isAlive_){
+		pos_.x += velocity_.x;
+		if (pos_.x < 0 + size_.x || pos_.x > 1280 - size_.x)
+		{
+			velocity_.x *= -1;
+		}
 	}
 }
 
 void Enemy::Draw()
 {
-	Novice::DrawEllipse(static_cast<int>(pos_.x), static_cast<int>(pos_.y), 
-		static_cast<int>(size_.x), static_cast<int>(size_.y),0.0f,RED,kFillModeSolid);
+	if (isAlive_) {
+		Novice::DrawEllipse(static_cast<int>(pos_.x), static_cast<int>(pos_.y),
+			static_cast<int>(size_.x), static_cast<int>(size_.y), 0.0f, RED, kFillModeSolid);
+	}
 }
