@@ -22,7 +22,7 @@ void Enemy::Update()
 	if (!isAlive_){
 		Init();
 		reSpawnTime_++;
-		if (reSpawnTime_ == 120){
+		if (reSpawnTime_ == 60){
 			isAlive_ = true;
 			reSpawnTime_ = 0;
 		}
