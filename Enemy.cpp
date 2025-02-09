@@ -3,6 +3,7 @@
 
 Enemy::Enemy()
 {
+	reSpawnTime_ = 0;
 }
 
 Enemy::~Enemy()
@@ -19,7 +20,12 @@ void Enemy::Init()
 void Enemy::Update()
 {
 	if (!isAlive_){
-
+		Init();
+		reSpawnTime_++;
+		if (reSpawnTime_ == 120){
+			isAlive_ = true;
+			reSpawnTime_ = 0;
+		}
 	}
 	if (isAlive_){
 		pos_.x += velocity_.x;
