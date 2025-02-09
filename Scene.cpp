@@ -15,5 +15,5 @@ void Scene::Update(char(&keys)[], char(&preKeys)[])
 
 void Scene::Draw()
 {
-	
+	Novice::DrawBox(0, 0, 1280, 720, 0, 0x00FF00FF, kFillModeSolid);
 }

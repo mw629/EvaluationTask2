@@ -1,7 +1,5 @@
 #include <Novice.h>
-#include "Scene.h"
-#include "GameScene.h"
-#include "TitleScene.h"
+#include "SceneManeger.h"
 
 const char kWindowTitle[] = "LC1A_27_ワタナベ_マサト";
 
@@ -18,9 +16,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	char preKeys[256] = { 0 };
 
 	// シーンの生成
-	Scene* scene=new TitleScene;
-	
-	int nowScene = 0;//0:TitleScene 1:GameScene
+	SceneManeger* scene =new SceneManeger();
 	
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {
@@ -34,18 +30,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		///
 		/// ↓更新処理ここから
 		///
-		if (scene->GetTransition()) {
-			delete scene;
-			if (nowScene == 0) {
-				scene = new GameScene;
-				nowScene = 1;
-			}
-			else {
-				scene = new TitleScene;
-				nowScene = 0;
-			}
-			scene->SetTransition(false);
-		}
+		
 
 		scene->Update(keys, preKeys);
 

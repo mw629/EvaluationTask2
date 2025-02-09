@@ -44,6 +44,9 @@
     <ClCompile Include="Scene.cpp">
       <Filter>Class</Filter>
     </ClCompile>
+    <ClCompile Include="SceneManeger.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\KamataEngine\DirectXGame\audio\Audio.h">
@@ -147,6 +150,12 @@
       <Filter>Class</Filter>
     </ClInclude>
     <ClInclude Include="Scene.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManeger.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="MyMsth.h">
       <Filter>Class</Filter>
     </ClInclude>
   </ItemGroup>

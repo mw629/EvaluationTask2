@@ -12,6 +12,8 @@ private:
 public:
 	GameScene();
 	~GameScene();
+	
+	void Collision();
 	void Init() override;
 	void Update(char(&keys)[], char(&preKeys)[]) override;
 	void Draw() override;

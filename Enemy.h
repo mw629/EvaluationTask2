@@ -2,6 +2,8 @@
 #pragma once
 class Enemy : public Object
 {
+private:
+	int reSpawnTime_;
 public:
 	Enemy();
 	~Enemy();
